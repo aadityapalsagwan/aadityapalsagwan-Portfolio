@@ -228,6 +228,36 @@
 
     form.reset();
   });
+
+  // Disable right-click context menu
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+// Disable F12, Ctrl+U, Ctrl+Shift+I
+document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 123) { // F12
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') { // Ctrl+U
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') { // Ctrl+Shift+I
+        e.preventDefault();
+    }
+});
+
+// Detect Developer Tools Opening
+(function() {
+    const devtoolsDetector = new Image();
+    Object.defineProperty(devtoolsDetector, 'id', {
+        get: function () {
+            alert('🚫 Developer tools are open!');
+        }
+    });
+
+    console.log(devtoolsDetector);
+})();
 </script>
 <script src="./assets/js/script.js"></script>
 
