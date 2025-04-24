@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Aaditya Pal - Full Stack Developer skilled in React.js, Node.js, and Data Visualization. Passionate about creating innovative web solutions.">
+    <meta name="keywords" content="Aaditya Pal, Full Stack Developer, Web Developer, Portfolio, React.js, Node.js, Data Visualization, Software Developer, MERN Developer">
+    <meta name="author" content="Aaditya Pal">
+    
+    <!-- Open Graph Meta Tags (Social Media Preview) -->
+    <meta property="og:title" content="Aaditya Pal | Full Stack Developer">
+    <meta property="og:description" content="Welcome to Aaditya Pal's portfolio. Explore projects, skills, and achievements in web development and data visualization.">
+    <meta property="og:image" content="https://source.unsplash.com/featured/?developer,technology">
+    <meta property="og:url" content="https://your-portfolio-link.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aaditya Pal | Full Stack Developer">
+    <meta name="twitter:description" content="Explore the portfolio of Aaditya Pal, a Full Stack Developer specializing in MERN stack and Data Visualization.">
+    <meta name="twitter:image" content="https://source.unsplash.com/featured/?developer,coding">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="animate__animated animate__fadeInDown  dashboard-header">Modern Dashboard Analytics</header>
+    
+    <div class="container-dashboard">
+        <div class="card animate__animated animate__fadeInUp">
+            <h3>Sales Overview</h3>
+            <canvas id="salesChart"></canvas>
+        </div>
+        
+        <div class="card animate__animated animate__fadeInUp animate__delay-1s">
+            <h3>Traffic Source</h3>
+            <canvas id="trafficChart"></canvas>
+        </div>
+        
+        <div class="card animate__animated animate__fadeInUp animate__delay-2s">
+            <h3>Revenue Growth</h3>
+            <canvas id="revenueChart"></canvas>
+        </div>
+    </div>
+    
+    <footer class="footer-dashboard">
+        © 2025 Modern Dashboard. All Rights Reserved.
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+const salesChart = new Chart(salesCtx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Sales',
+            data: [120, 190, 300, 500, 200, 300],
+            backgroundColor: 'rgba(59, 130, 246, 0.5)',
+            borderColor: '#3b82f6',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.4
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: {
+            duration: 1000
+        }
+    }
+});
+
+const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+const trafficChart = new Chart(trafficCtx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Direct', 'Social', 'Referral'],
+        datasets: [{
+            label: 'Traffic',
+            data: [55, 25, 20],
+            backgroundColor: [
+                '#3b82f6',
+                '#06b6d4',
+                '#10b981'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: {
+            animateScale: true
+        }
+    }
+});
+
+const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+const revenueChart = new Chart(revenueCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        datasets: [{
+            label: 'Revenue',
+            data: [40000, 50000, 60000, 70000],
+            backgroundColor: '#10b981'
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: {
+            duration: 1000
+        }
+    }
+});
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

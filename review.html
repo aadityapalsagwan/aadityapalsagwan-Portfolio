@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Portfolio of Aaditya Pal - Full Stack Developer skilled in React.js, Node.js, and Data Visualization. Passionate about creating innovative web solutions.">
+<meta name="keywords" content="Aaditya Pal, Full Stack Developer, Web Developer, Portfolio, React.js, Node.js, Data Visualization, Software Developer, MERN Developer">
+<meta name="author" content="Aaditya Pal">
+
+<!-- Open Graph Meta Tags (Social Media Preview) -->
+<meta property="og:title" content="Aaditya Pal | Full Stack Developer">
+<meta property="og:description" content="Welcome to Aaditya Pal's portfolio. Explore projects, skills, and achievements in web development and data visualization.">
+<meta property="og:image" content="https://source.unsplash.com/featured/?developer,technology">
+<meta property="og:url" content="https://your-portfolio-link.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aaditya Pal | Full Stack Developer">
+<meta name="twitter:description" content="Explore the portfolio of Aaditya Pal, a Full Stack Developer specializing in MERN stack and Data Visualization.">
+<meta name="twitter:image" content="https://source.unsplash.com/featured/?developer,coding">
+
+    <link rel="shortcut icon" href="./assets/images/Adi.jpg" type="image/x-icon">
+    <title>Resume | Aaditya Pal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-top: 60px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .header p a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .header p a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: #007bff;
+        }
+
+        .timeline li {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -9px;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border: 3px solid #007bff;
+            border-radius: 50%;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            color: #888;
+        }
+
+        .download-btn {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0 0;
+        }
+
+        .download-btn button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn button:hover {
+            background-color: #0056b3;
+        }
+
+        @media(max-width: 600px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="resume" class="container">
+        <div class="header">
+            <!-- <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic"> -->
+            <h1>Aaditya Pal</h1>
+            <p>B.Tech | Computer Science Engineering | Fresher</p>
+            <p>
+                <a href="mailto:aditya.pal40443@gmailcom">aditya.pal40443@gmailcom</a> |
+                <a href="tel:+919105880014">+91-91058800014</a> |
+                <a href="https://linkedin.com/in/aadityapalsagwan/" target="_blank">LinkedIn Profile</a>
+            </p>
+        </div>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Passionate and detail-oriented Computer Science Engineering fresher with strong skills in full-stack
+                development, data visualization, and problem-solving. Seeking to leverage my technical expertise and
+                creativity at a leading tech organization. Committed to delivering high-quality and innovative solutions
+                in dynamic environments.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <!-- <ul class="timeline"> -->
+            <li><strong>B.Tech in Computer Science Engineering</strong> | Uttarakhand Technical University | 2021-2025 |
+                CGPA: 6.5/10</li>
+            <li><strong>12th Standard PCM</strong> | SF DAV Public School | 2021 | 65.6%</li>
+            <li><strong>10th Standard</strong> | SF DAV Public School | 2019 | 62.6%</li>
+            <!-- </ul> -->
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, C, Java, JavaScript</li>
+                <li><strong>Frameworks & Libraries:</strong> React.js, Node.js, Express.js, D3.js</li>
+                <li><strong>Databases:</strong> MongoDB, MySQL</li>
+                <li><strong>Web Technologies:</strong> HTML5, CSS3, PHP</li>
+                <li><strong>Tools & Platforms:</strong> Git & GitHub, VS Code, Postman, Web3Forms</li>
+                <li><strong>Analytics:</strong> Google Analytics</li>
+                <li><strong>Other Skills:</strong> Data Visualization, REST API Integration, Problem Solving, Responsive
+                    Web Design</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Portfolio Website</strong> – Personal portfolio built with HTML, CSS, JavaScript showcasing
+                    skills and achievements.</li>
+                <li><strong>Internshala Clone</strong> – Developed using HTML, CSS, JavaScript, and PHP, providing basic
+                    job posting and applying features.</li>
+                <li><strong>React Dashboard (MERN Stack)</strong> – Data Visualization Dashboard created using React.js,
+                    Node.js, MongoDB, and D3.js for dynamic charts and insights.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Internships</h2>
+            <!-- <ul class="timeline"> -->
+            <li><strong>Web Development Intern</strong> | Code Tech | 1 Month | Built responsive websites and
+                contributed to frontend optimization projects.</li>
+            <!-- </ul> -->
+        </section>
+
+        <section>
+            <h2>Certificates</h2>
+            <ul>
+                <li>Cisco: Python Essentials 1</li>
+                <li>Cisco: Python Essentials 2</li>
+                <li>Great Learning: Google Analytics Certificate</li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2025 Aaditya Pal. All Rights Reserved.
+        </footer>
+    </div>
+
+    <!-- <div class="download-btn">
+        <button onclick="downloadPDF()">Download Resume as PDF</button>
+    </div> -->
+<!-- 
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('resume');
+            html2pdf().from(element).save('Aaditya_Pal_Resume.pdf');
+        }
+    </script> -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internshala Clone</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Aaditya Pal - Full Stack Developer skilled in React.js, Node.js, and Data Visualization. Passionate about creating innovative web solutions.">
+    <meta name="keywords" content="Aaditya Pal, Full Stack Developer, Web Developer, Portfolio, React.js, Node.js, Data Visualization, Software Developer, MERN Developer">
+    <meta name="author" content="Aaditya Pal">
+    
+    <!-- Open Graph Meta Tags (Social Media Preview) -->
+    <meta property="og:title" content="Aaditya Pal | Full Stack Developer">
+    <meta property="og:description" content="Welcome to Aaditya Pal's portfolio. Explore projects, skills, and achievements in web development and data visualization.">
+    <meta property="og:image" content="https://source.unsplash.com/featured/?developer,technology">
+    <meta property="og:url" content="https://your-portfolio-link.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aaditya Pal | Full Stack Developer">
+    <meta name="twitter:description" content="Explore the portfolio of Aaditya Pal, a Full Stack Developer specializing in MERN stack and Data Visualization.">
+    <meta name="twitter:image" content="https://source.unsplash.com/featured/?developer,coding">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #0d6efd;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #0d6efd;
+        }
+
+        .main-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #0d6efd;
+        }
+
+        .cards-section {
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        footer {
+            background: #212529;
+            color: #adb5bd;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Internshala</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Internships</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-section">
+        <div class="hero">
+            <h1>Hi, Aaditya! 👋</h1>
+            <p>Let's help you land your dream career</p>
+        </div>
+
+        <div class="cards-section">
+            <h2 class="section-title">Trending on Internshala 🔥</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?coding" alt="Trending">
+                    <div class="card-content">
+                        <h3>Master the demand skills</h3>
+                        <p>Learn Web Development, Data Science, and more!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?startup" alt="Internship">
+                    <div class="card-content">
+                        <h3>Career Training</h3>
+                        <p>Fast track your career with our expert-led programs.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?office" alt="Internship">
+                    <div class="card-content">
+                        <h3>Internships that Pay</h3>
+                        <p>Get hands-on experience and boost your resume.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-section">
+            <h2 class="section-title">Recommended for you</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?technology" alt="Course">
+                    <div class="card-content">
+                        <h3>Web Development</h3>
+                        <p>Learn HTML, CSS, JS and build real projects.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?python" alt="Course">
+                    <div class="card-content">
+                        <h3>Machine Learning</h3>
+                        <p>Master AI techniques and ML algorithms.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?app" alt="Course">
+                    <div class="card-content">
+                        <h3>App Development</h3>
+                        <p>Build mobile apps with Flutter and React Native.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Internshala Clone. Designed by Aaditya.
+    </footer>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

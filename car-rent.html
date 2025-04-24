@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Aaditya Pal - Full Stack Developer skilled in React.js, Node.js, and Data Visualization. Passionate about creating innovative web solutions.">
+  <meta name="keywords" content="Aaditya Pal, Full Stack Developer, Web Developer, Portfolio, React.js, Node.js, Data Visualization, Software Developer, MERN Developer">
+  <meta name="author" content="Aaditya Pal">
+  
+  <!-- Open Graph Meta Tags (Social Media Preview) -->
+  <meta property="og:title" content="Aaditya Pal | Full Stack Developer">
+  <meta property="og:description" content="Welcome to Aaditya Pal's portfolio. Explore projects, skills, and achievements in web development and data visualization.">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?developer,technology">
+  <meta property="og:url" content="https://your-portfolio-link.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aaditya Pal | Full Stack Developer">
+  <meta name="twitter:description" content="Explore the portfolio of Aaditya Pal, a Full Stack Developer specializing in MERN stack and Data Visualization.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?developer,coding">
+  <link rel="shortcut icon" href="https://images.unsplash.com/photo-1684849311625-c7155af9b2fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHN1dnxlbnwwfHwwfHx8MA%3D%3D" type="image/x-icon">
+  <title>Car Tent - Premium Car Rentals</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #eef2f7;
+      padding: 20px;
+      color: #333;
+    }
+  </style>
+
+</head>
+<body>
+
+<header class="car-rental-header">
+  🚗 Car Tent - Rent Your Dream Car 🚗
+</header>
+
+<section class="filter-section">
+  <h2>Customize Your Ride</h2>
+
+  <label for="car-type">Select Car Type:</label>
+  <select id="car-type" onchange="updatePrice()">
+    <option value="sedan">Sedan</option>
+    <option value="suv">SUV</option>
+    <option value="sports">Sports Car</option>
+    <option value="luxury">Luxury</option>
+  </select>
+
+  <label for="duration">Select Duration (Hours):</label>
+  <select id="duration" onchange="updatePrice()">
+    <option value="1">1 Hour</option>
+    <option value="3">3 Hours</option>
+    <option value="6">6 Hours</option>
+    <option value="12">12 Hours</option>
+    <option value="24">24 Hours (Full Day)</option>
+  </select>
+
+  <div class="price-display">
+    Estimated Rent: ₹<span id="price">500</span>
+  </div>
+</section>
+
+<section class="car-grid">
+  <div class="car-card">
+    <img src="data:image/jpeg;base64,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cLX8SdZDYg8mPiR+RmxUt3mPKTqG67HlLRp4H7HqSflaegrclUfu3+d5vlHdBj9mTqO5p7JBzhadTkSPCw+Qnv6nUPEt6mdTobl90sKG5o7IHHl2Qx5TOmw2P2TO00d0l7BJtHddB9kQOIJu45+yZITdVz9kzudPd1OyS6ewkH2RA4MNzah+yZ8bcOseAn6DTY6DkJnTZi9ggfmyp9H+N+xTDeJtLGjuXtWoFDUEJXKA7smYKliFJGpUWHEG1tLT9DJs9eyZkwtuUDkO630b16bCrXKFxfIq6JTvxyiwux96b/hNhFeM2ZKM9rTgVuGwWWWNFbTIEn0CB9iIgV1TBCRauze6Xc+EQNZrbJvyldX2EDy+E3YoOyeTREDm2J3YB5WlVid1O6dbOFWeGwKnlA4pX3TPZIFXdJvdndW2ap5TGdlJ7sDgdXc9jykSruRUPAT9C/5JT3RPo2SvYIH5qrbi4jkhnzD7pbRpsGp0XuODIQrDlzI+fOfpgbNXsntcEBygfnjDbr7WZ1cYfKy3Ck9Cq63vdVuD7R1IPylvhvo4xtVs+JdSezMWt3aj4cJ3QYYT0KEDlmD3CK+0by3o7qKvKb70E+9BA1CjsBR9n4SXT2Qo5fCbL0An0URAok2WOyZ02eOyW/RCfRTECtGCHZMi4QdksAsWgRFwwnsYeSYgYRQnoUpkiB4CT0Fn2IHzLPsRAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERA//9k=" alt="Sedan">
+    <div class="details">
+      <h3>Sleek Sedan</h3>
+      <p>Comfortable and stylish ride for city roads.</p>
+      <div class="rent">₹500/hr</div>
+    </div>
+  </div>
+
+  <div class="car-card">
+    <img src="https://images.unsplash.com/photo-1684849311625-c7155af9b2fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHN1dnxlbnwwfHwwfHx8MA%3D%3D" alt="SUV">
+    <div class="details">
+      <h3>Powerful SUV</h3>
+      <p>Perfect for long drives and rough terrains.</p>
+      <div class="rent">₹800/hr</div>
+    </div>
+  </div>
+
+  <div class="car-card">
+    <img src="https://images.unsplash.com/photo-1634327760732-d90c41717104?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D=" alt="Sports Car">
+    <div class="details">
+      <h3>Fast Sports Car</h3>
+      <p>Experience the thrill and speed.</p>
+      <div class="rent">₹1500/hr</div>
+    </div>
+  </div>
+
+  <div class="car-card">
+    <img src="https://images.unsplash.com/photo-1677552072881-e343a1a5cde3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJvbGxzJTIwcm95Y2V8ZW58MHx8MHx8fDA%3D" alt="Luxury Car">
+    <div class="details">
+      <h3>Luxury Ride</h3>
+      <p>Premium luxury for special moments.</p>
+      <div class="rent">₹2500/hr</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-car-rent">
+  © 2025 Car Tent | All Rights Reserved
+</footer>
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

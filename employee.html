@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Payroll System</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Aaditya Pal - Full Stack Developer skilled in React.js, Node.js, and Data Visualization. Passionate about creating innovative web solutions.">
+  <meta name="keywords" content="Aaditya Pal, Full Stack Developer, Web Developer, Portfolio, React.js, Node.js, Data Visualization, Software Developer, MERN Developer">
+  <meta name="author" content="Aaditya Pal">
+  
+  <!-- Open Graph Meta Tags (Social Media Preview) -->
+  <meta property="og:title" content="Aaditya Pal | Full Stack Developer">
+  <meta property="og:description" content="Welcome to Aaditya Pal's portfolio. Explore projects, skills, and achievements in web development and data visualization.">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?developer,technology">
+  <meta property="og:url" content="https://your-portfolio-link.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aaditya Pal | Full Stack Developer">
+  <meta name="twitter:description" content="Explore the portfolio of Aaditya Pal, a Full Stack Developer specializing in MERN stack and Data Visualization.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?developer,coding">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .employee-form, .employee-table {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #4f46e5;
+      font-size: 1.8rem;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    button {
+      grid-column: span 2;
+      background: #4f46e5;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #6366f1;
+      color: white;
+    }
+
+    td {
+      background: #f9fafb;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 600px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      button {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  🧾 Employee Payroll System
+</header>
+
+<div class="container">
+
+  <section class="employee-form">
+    <h2>Add Employee</h2>
+    <form id="payrollForm">
+      <div>
+        <label for="name">Employee Name</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div>
+        <label for="position">Position</label>
+        <input type="text" id="position" required>
+      </div>
+
+      <div>
+        <label for="salary">Monthly Salary (₹)</label>
+        <input type="number" id="salary" required>
+      </div>
+
+      <div>
+        <label for="status">Employment Status</label>
+        <select id="status" required>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Contract">Contract</option>
+        </select>
+      </div>
+
+      <button type="submit">Add to Payroll</button>
+    </form>
+  </section>
+
+  <section class="employee-table">
+    <h2>Employee List</h2>
+    <table id="payrollTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Salary (₹)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Employee Rows will appear here -->
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Payroll System | Made with ❤️
+</footer>
+
+<script>
+  const form = document.getElementById('payrollForm');
+  const tableBody = document.getElementById('payrollTable').querySelector('tbody');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const position = document.getElementById('position').value;
+    const salary = document.getElementById('salary').value;
+    const status = document.getElementById('status').value;
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${name}</td>
+      <td>${position}</td>
+      <td>₹${parseInt(salary).toLocaleString()}</td>
+      <td>${status}</td>
+    `;
+
+    tableBody.appendChild(row);
+
+    form.reset();
+  });
+</script>
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
