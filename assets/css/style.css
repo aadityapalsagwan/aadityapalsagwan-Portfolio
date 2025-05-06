@@ -52,7 +52,7 @@ body {
   top: 0;
   z-index: 1000;
   background: var(--white-color);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
@@ -90,6 +90,7 @@ body {
   font-weight: 400;
   padding: 10px 15px;
   border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
   color: var(--black-color);
 }
 
