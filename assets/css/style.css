@@ -51,7 +51,8 @@ body {
   left: 0;
   top: 0;
   z-index: 1000;
-  background: var(--primary-color);
+  background: var(--white-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 
@@ -86,7 +87,7 @@ body {
 
 .left-navbar ul li a {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   padding: 10px 15px;
   border-radius: 5px;
   color: var(--black-color);
