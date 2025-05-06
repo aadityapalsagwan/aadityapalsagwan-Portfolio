@@ -217,12 +217,12 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 .center-content h1{
   color: var(--black-color);
   font-size: 6rem;
-  font-family: "latin";
+  font-family: "poppins";
 }
 .center-content p{
   color: var(--black-color);
   font-size: 4rem;
-  font-family: "latin";
+  font-family: "poppins";
   font-style: italic;
 }
 
@@ -399,7 +399,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 
@@ -771,7 +771,7 @@ textarea:focus {
 }
 
 .footer-column h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   color: #fff;
 }
@@ -824,11 +824,11 @@ textarea:focus {
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
-    text-align: center;
+    text-align: left;
   }
 
   .social-icons {
-    justify-content: center;
+    justify-content: left;
   }
 }
 
@@ -960,7 +960,7 @@ select {
 
 .car-card .details .rent {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 400;
   color: #10b981;
 }
 
